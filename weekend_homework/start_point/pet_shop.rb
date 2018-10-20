@@ -49,7 +49,8 @@ end
 #     end
 #   end
 # end
-# i dont think this is correct?
+# works but i dont understand
+# shout out to christina for the solution below
 
 def remove_pet_by_name (shop, name)
   for pet in shop[:pets]
@@ -58,4 +59,29 @@ def remove_pet_by_name (shop, name)
     end
     return shop[:pets]
   end
+end
+
+def add_pet_to_stock (shop, new_pet)
+  shop[:pets] << new_pet
+  for pet in shop[:pets]
+    return  pet.count
+  end
+end
+
+def customer_cash (customer)
+  return customer[:cash]
+end
+
+
+def remove_customer_cash (person, cash_amount)
+  person[:cash] -= cash_amount
+end
+
+def customer_pet_count (person)
+  return person[:pets].count
+end
+
+def add_pet_to_customer (customer, new_pet)
+  customer[:pets] << new_pet
+  return customer[:pets].count
 end
